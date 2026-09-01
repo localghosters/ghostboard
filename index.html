@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostBoard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <div class="badge">LOCALGHOSTERS</div>
+    <h1>GhostBoard</h1>
+    <p class="sub">A tiny offline playground for random ideas, notes, and experiments.</p>
+
+    <section class="card">
+      <textarea id="note" placeholder="Write something..."></textarea>
+      <div class="row">
+        <button id="save">Save note</button>
+        <button id="ghost">Generate random ghost</button>
+      </div>
+      <p id="status">Nothing saved yet.</p>
+    </section>
+
+    <section class="card">
+      <h2>Latest notes</h2>
+      <ul id="notes"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
