@@ -109,6 +109,33 @@ Please use the issue templates (`.github/ISSUE_TEMPLATE/`) — they ask for
 the minimum info needed to act on a report (repro steps, expected vs.
 actual behavior, browser/OS for bugs).
 
+
+## Secret scanning
+
+Every push and PR is scanned by [SecretShield](https://github.com/Sam3360/secretshield)
+in CI (`.github/workflows/secretshield.yml`) to catch accidentally
+committed API keys, tokens, and other credentials before they land in
+history. Config lives in `secretshield.toml` at the repo root.
+
+You can also catch this locally, before you even push:
+
+```bash
+pip install secretshield
+secretshield scan .          # scan the whole repo
+secretshield scan --staged   # just what you're about to commit
+```
+
+Optionally, install it as a pre-commit hook so a leak never leaves your
+machine in the first place:
+
+```bash
+secretshield install-hook
+```
+
+This wraps (not replaces) any existing pre-commit hook you already have,
+and only checks staged content, not your whole working tree.
+
+
 ## Security issues
 
 Please don't open a public issue for a security concern — see
