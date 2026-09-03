@@ -1,0 +1,34 @@
+:root {
+  /* Surfaces */
+  --gb-bg: #0d0f12;
+  --gb-canvas-bg: #101317;
+  --gb-surface: #16191d;
+  --gb-surface-raised: #1c2026;
+  --gb-border: #262b31;
+  --gb-border-strong: #333941;
+
+  /* Text */
+  --gb-text: #e8eaed;
+  --gb-text-muted: #8a9099;
+  --gb-text-faint: #565c66;
+
+  /* Accents -- "spectral" palette, deliberately not the usual indigo/violet
+     SaaS default. Mint is the primary accent; violet is reserved for
+     selection so the two never compete. */
+  --gb-accent: #7de0c7;
+  --gb-accent-strong: #52c9ab;
+  --gb-selection: #a78bfa;
+  --gb-danger: #f28482;
+
+  --gb-grid-dot: #262b31;
+
+  /* Typography */
+  --gb-font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --gb-font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Layout */
+  --gb-topbar-height: 52px;
+  --gb-radius-sm: 6px;
+  --gb-radius-md: 10px;
+  --gb-shadow-panel: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
